@@ -100,9 +100,26 @@
         }
       };
     /* 
-    PROBLEM 5 (DEBUGGING): 
+    PROBLEM 5 (DEBUGGING): This object contains a value property and a double method that multiplies the value by 2. When invoking the double method, you receive the error: 'NaN' (Not a Number). Fix the code below and console.log the double method to see the correct result printed to the console.
+      const obj = {
+        value: 10,
+        double: () => {
+          return this.value * 2;
+        }
+      };
+
+console.log(obj.double()); // Output: NaN
     */
     
+    const obj = {
+        value: 10,
+        double() {
+          return this.value * 2; //in an arrow function, 'this' returns undefined because the global object does not have a value property
+        }
+      };
+
+      console.log(obj.double()); // Output: 20
+
   </script> 
   <section style="border: 2px solid blue; border-radius: 5px; padding: 10px; box-shadow: 5px 3px 3px orange; margin-top: 20px;">
     <h3>About The Solutions</h3>
