@@ -14,7 +14,13 @@
       };
     */
 
-    //ENTER YOUR CODE HERE
+    // const obj = {
+    //   multiplayer: 10,
+    //   function multiply (a, b) {
+    //     return `a * b * ${this.multiplier}`;
+    //   }
+    // }
+    // console.log(obj.multiply(2, 3));
 
     /*
     PROBLEM 2: Change the arrow function called calculateTotal to work within the flock object below while also using the 'this' keyword. Console.log the calculateTotal method to see the results printed to the console.
@@ -28,7 +34,16 @@
     }
     */
 
-    //ENTER YOUR CODE HERE
+    let sum = 0;
+    const calculateTotal = function(number) {
+      return sum += number;
+    }
+
+    const flock = {
+      herd: 200,
+      species: 'seagull',
+    }
+    console.log(calculateTotal(3));
 
 
      /*
@@ -73,11 +88,11 @@
     */
       // const obj = {
       //   value: 10,
-      //   double: () => {
+      //   function double () {
       //     return this.value * 2;
       //   }
       // };
-      //
+      
       // console.log(obj.double()); // Output: NaN
 
 
