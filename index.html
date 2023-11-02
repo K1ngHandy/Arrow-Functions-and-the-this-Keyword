@@ -14,13 +14,13 @@
       };
     */
 
-    // const obj = {
-    //   multiplayer: 10,
-    //   function multiply (a, b) {
-    //     return `a * b * ${this.multiplier}`;
-    //   }
-    // }
-    // console.log(obj.multiply(2, 3));
+    const obj = {
+      multiplier: 10,
+      multiply(a, b) {
+        return a * b * this.multiplier;
+      }
+    }
+    console.log(obj.multiply(2, 3));
 
     /*
     PROBLEM 2: Change the arrow function called calculateTotal to work within the flock object below while also using the 'this' keyword. Console.log the calculateTotal method to see the results printed to the console.
