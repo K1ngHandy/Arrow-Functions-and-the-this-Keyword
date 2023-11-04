@@ -48,7 +48,7 @@
 
      /*
     PROBLEM 3: Change the arrow function called countdown to work within the game object below while using the 'this' keyword. Console.log the method to see the results printed to the console.
-
+ 
     const countDown = (num) => {
       if (num >= 0) {
         console.log(`Current countdown number: ${num}`);
@@ -63,7 +63,18 @@
     }
     */
 
-    //ENTER YOUR CODE HERE
+    const game = {
+      name: 'Hide n Seek',
+      players: 5,
+      location: 'Central Park',
+      countDown: function(num) {
+        while (num >= 0) {
+          console.log(`Current countdown number: ${num}`);
+          num--;
+        }
+      }
+    }
+    game.countDown(3);
 
 
     /*
