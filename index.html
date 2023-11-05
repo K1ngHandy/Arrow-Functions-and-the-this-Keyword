@@ -67,7 +67,7 @@
       name: 'Hide n Seek',
       players: 5,
       location: 'Central Park',
-      countDown: function(num) {
+      countDown: function(num) { // change countDown function to traditional function within object
         while (num >= 0) {
           console.log(`Current countdown number: ${num}`);
           num--;
@@ -92,19 +92,19 @@
     }
     */
 
-    //ENTER YOUR CODE HERE
+    
 
     /*
     PROBLEM 5 (DEBUGGING): This object contains a value property and a double method that multiplies the value by 2. When invoking the double method, you receive the error: 'NaN' (Not a Number). Fix the code below and console.log the double method to see the correct result printed to the console.
     */
-      // const obj = {
-      //   value: 10,
-      //   function double () {
-      //     return this.value * 2;
-      //   }
-      // };
+      const obj = {
+        value: 10,
+        double: function() {
+          return this.value * 2;
+        }
+      };
       
-      // console.log(obj.double()); // Output: NaN
+      console.log(obj.double()); // Output: NaN
 
 
   </script>
