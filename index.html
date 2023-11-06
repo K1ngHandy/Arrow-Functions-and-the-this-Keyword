@@ -14,13 +14,13 @@
       };
     */
 
-    const obj = {
-      multiplier: 10,
-      multiply(a, b) {
-        return a * b * this.multiplier;
-      }
-    }
-    console.log(obj.multiply(2, 3));
+    // const obj = {
+    //   multiplier: 10,
+    //   multiply: function(a, b) {
+    //     return a * b * this.multiplier;
+    //   }
+    // }
+    // console.log(obj.multiply(2, 3));
 
     /*
     PROBLEM 2: Change the arrow function called calculateTotal to work within the flock object below while also using the 'this' keyword. Console.log the calculateTotal method to see the results printed to the console.
@@ -42,6 +42,7 @@
     const flock = {
       herd: 200,
       species: 'seagull',
+      calculateTotal: calculateTotal
     }
     console.log(calculateTotal(3));
 
@@ -92,6 +93,29 @@
     }
     */
 
+    const add = function(num1, num2) {
+      return this.num1 + this.num2;
+    }
+    const subtract = function(num1, num2) {
+      return this.num1 - this.num2;
+    }
+    const multiply = function(num1, num2) {
+      return this.num1 * this.num2;
+    }
+
+    const tech = {
+      name: 'calculator',
+      type: 'computer',
+      num1: 4,
+      num2: 5,
+      add: add,
+      subtract: subtract,
+      multiply: multiply
+    }
+    console.log('Add:', tech.add());
+    console.log('Subtract:', tech.subtract());
+    console.log('Multiply:', tech.multiply());
+    
     
 
     /*
